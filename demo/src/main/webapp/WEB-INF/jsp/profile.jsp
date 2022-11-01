@@ -33,7 +33,7 @@
                 </ul>
             </div>
 
-            <button type="button" class="btn btn-outline-dark me-2" style="border: none;">@hadrihl</button>
+            <button type="button" class="btn btn-outline-dark me-2" style="border: none;">@Goo</button>
             <button type="button" class="btn btn-danger" onclick=document.location='/signin'>Logout</button>
         </div>
 

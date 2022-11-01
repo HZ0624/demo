@@ -20,13 +20,19 @@ import com.example.demo.entity.UserRepository;
 @Repository
 	public interface UserRepository extends JpaRepository<User, Integer> {
 
-		@Query("SELECT u FROM User u where u.email = :email")
-		public User findUserByEmail(String email);
+	public void save(UserRepository user);
+
+	@Query("SELECT u FROM User u where u.email = :email")
+	public User findUserByEmail(String email);
+				
+	      @Query("SELECT u FROM User u WHERE u.verificationCode = ?1")
+			public User findUserByVerificationCode(String code);
 		
-		  
 		@Query("SELECT u FROM User u WHERE u.username =:username")
 		public User findUserByUsername(String username);
 		
+		//dont put bio it was messing with the code
+
 		@Query(value = "SELECT s FROM User s WHERE s.username LIKE '%' || :keyword || '%'"
 				+ " OR s.email LIKE '%' || :keyword || '%'"
 				+ " OR s.firstname LIKE '%' || :keyword || '%'"
@@ -36,7 +42,12 @@ import com.example.demo.entity.UserRepository;
 				+ " OR s.country LIKE '%' || :keyword || '%'"
 				)
 		public List<User> search(@Param("keyword") String keyword);
-}
+		
+		@Query("SELECT u FROM User u WHERE u.resetPasswordToken = ?1")
+		public User findUserByResetPasswordToken(String token);
+
+	}
+
 		
 
 		

@@ -35,31 +35,40 @@ public class SecurityConfig {
 		return auth;
 	}
 	@Bean
-	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
-		
-		http
-			.authorizeHttpRequests()
-				.antMatchers(HttpMethod.GET, "/").permitAll()
-				.antMatchers(HttpMethod.GET, "/assets/**").permitAll()
-				.antMatchers(HttpMethod.GET, "/about").permitAll()
-				.antMatchers(HttpMethod.GET, "/contact").permitAll()
-				.antMatchers(HttpMethod.GET, "/signup").permitAll()
-				.antMatchers(HttpMethod.GET, "/profile").permitAll()
-				.antMatchers(HttpMethod.POST, "/process_signup").permitAll()
-				.anyRequest().authenticated()
-				.and()
-				.formLogin()
-				.loginPage("/signin")
-				.loginProcessingUrl("/login")
-				.usernameParameter("email")
-				.defaultSuccessUrl("/dashboard")
-				.permitAll()
-				.and()
-				.logout()
-				.invalidateHttpSession(true)
-				.permitAll();
+    public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 
-		
-		return http.build();
+        http
+            .authorizeHttpRequests()
+                .antMatchers(HttpMethod.GET, "/").permitAll()
+                .antMatchers(HttpMethod.GET, "/assets/").permitAll()
+                .antMatchers(HttpMethod.GET, "/images/").permitAll()
+                .antMatchers(HttpMethod.GET, "/about").permitAll()
+                .antMatchers(HttpMethod.GET, "/signin").permitAll()
+                .antMatchers(HttpMethod.GET, "/signup").permitAll()
+                .antMatchers(HttpMethod.POST, "/process_signup").permitAll()
+                .antMatchers(HttpMethod.GET, "/profile").permitAll()
+                .antMatchers(HttpMethod.POST, "/dashboard").permitAll()
+                .antMatchers(HttpMethod.GET, "/verify").permitAll()
+                .antMatchers(HttpMethod.GET, "/verify-fail").permitAll()
+                .antMatchers(HttpMethod.GET, "/forgot-password").permitAll()
+                .antMatchers(HttpMethod.POST, "/forgot-password").permitAll()
+                .antMatchers(HttpMethod.GET, "/verify-reset-password").permitAll()
+                .antMatchers(HttpMethod.GET, "/reset-password").permitAll()
+                .antMatchers(HttpMethod.POST, "/reset-password").permitAll()
+                .anyRequest().authenticated()
+                .and()
+            .formLogin()
+                .loginPage("/login")
+                .loginProcessingUrl("/login")
+                .usernameParameter("email")
+                .defaultSuccessUrl("/dashboard")
+                .permitAll()
+                .and()
+            .logout()
+                .invalidateHttpSession(true)
+                .permitAll();
+
+
+        return http.build();
 	}
 }

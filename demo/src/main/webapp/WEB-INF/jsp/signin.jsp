@@ -31,22 +31,22 @@
                     </lael>
                 </div>
                 <div class="form-group d-grid gap-2">
-                    <button type="submit" class="btn btn-success w-100" > Sign in </button>
-                    <button  class="btn btn-success w-100" onclick=document.location='/signup' >Sign up</button>
+                    <button type="submit" class="btn btn-success w-100"> Sign in with Email</button>
+                    <button onclick=document.location='/signup' class="btn btn-success w-100"> Sign up with Email</button>
+                    <a href="/forgot-password" class="text-primary">Forgot your password?</a>
+                    <a href="/#">Return to homepage</a>
                 </div>
                 
-               
-
                 <c:if test="${error_string != null}">
 					<div class="alert alert-danger mt-3">
 						${error_string}
 					</div>
 				</c:if>
 				
-                <footer class="mt-5 text-muted">&copy; 2022. <a href="/">OneStopGroceries</a> portal.<br/>
-                    Made with <i class="fa-solid fa-heart"></i> in Penang.<br/>
+                <footer class="mt-5 text-muted">&copy; 2022.
                     <i class="fa-brands fa-github"></i>
-                    <a href="https://github.com/hadrihl/onestopgroceries"> onestopgroceries</a>
+                    <a href="https://github.com/him32223/demo">demo</a>
+                  
                 </footer>
             </div>
         </div>

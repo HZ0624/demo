@@ -9,14 +9,17 @@ import com.example.demo.entity.User;
 
 public class CustomUserDetails implements UserDetails {
 	
-	private User user;
+private User user;
 	
+	// default constructor
 	public CustomUserDetails(User user) {
 		this.user = user;
 	}
+	
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -47,6 +50,12 @@ public class CustomUserDetails implements UserDetails {
 
 	@Override
 	public boolean isEnabled() {
-		return true;
+		return user.isEnabled();
 	}
+	
+	
+	public void setUsername(String username) {
+		this.user.setUsername(username);
+	}
+
 }
