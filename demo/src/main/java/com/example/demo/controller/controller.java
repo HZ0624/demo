@@ -29,7 +29,7 @@ public class controller {
 	// get homepage
 	@GetMapping("/")
 	public String getHomePage() {
-		return "signin";
+		return "index";
 	}
 	
 	// get about page
@@ -55,6 +55,8 @@ public class controller {
 	public String getSignUpPage() {
 		return "signup";
 	}
+	
+	
 	
 	// get dashboard page
 	@GetMapping("/dashboard")

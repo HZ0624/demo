@@ -31,8 +31,8 @@
                     </lael>
                 </div>
                 <div class="form-group d-grid gap-2">
-                    <button type="submit" class="btn btn-success w-100"> Sign in with Email</button>
-                    <button onclick=document.location='/signup' class="btn btn-success w-100"> Sign up with Email</button>
+                    <button type="submit"  class="btn btn-success w-100"> Sign in with Email</button>
+                    
                     <a href="/forgot-password" class="text-primary">Forgot your password?</a>
                     <a href="/#">Return to homepage</a>
                 </div>
@@ -45,7 +45,7 @@
 				
                 <footer class="mt-5 text-muted">&copy; 2022.
                     <i class="fa-brands fa-github"></i>
-                    <a href="https://github.com/him32223/demo">demo</a>
+                    <a href="https://www.facebook.com/cheanhung.goo/">demo_GOO</a>
                   
                 </footer>
             </div>

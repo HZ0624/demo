@@ -30,12 +30,12 @@
                 </div>
                 <div class="form-group d-grid gap-2">
                     <button class="btn btn-success w-100">Sign up with email</button>
-                    <button class="btn btn-success w-100" onclick=document.location='/signin'>Sign In</button>
+                    
                 </div>
                 <footer class="mt-5 text-muted">&copy; 2022. <a href="/">linkedMeIn</a> portal.<br/>
                     Made with <i class="fa-solid fa-heart"></i> in Penang.<br/>
                     <i class="fa-brands fa-github"></i>
-                    <a href=""> linkedmein</a>
+                    <a href="https://www.facebook.com/cheanhung.goo/"> demo_GOO</a>
                 </footer>
             </form>
         </div>

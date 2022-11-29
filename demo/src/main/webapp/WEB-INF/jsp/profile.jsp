@@ -111,7 +111,7 @@
           <span>&copy; 2022. <a href="#">LinkedMeIn</a> portal.<br/>
             Made with <i class="fa-solid fa-heart"></i> in Penang.<br/>
             <i class="fa-brands fa-github"></i>
-            <a href="https://github.com/hadrihl/linkedmein"> linkedmein</a>
+            <a href="https://www.facebook.com/cheanhung.goo/"> demo_GOO</a>
           </span>
         </div>
 

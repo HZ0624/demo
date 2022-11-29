@@ -27,6 +27,7 @@
                     <li class="nav-item active">
                       <a href="/contact" class="nav-link">Contact</a>
                     </li>
+                   
                     <li class="nav-item active">
                       <a href="#" class="nav-link">Find</a>
                     </li>
@@ -55,15 +56,20 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="/settings">Settings</a></li>
                   <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                  <li><a class="dropdown-item" href="/jobs">Jobs</a></li>
                 </ul>
               </li>
       </ul>
-            <button type="button" class="btn btn-danger" onclick=document.location='/signin'>Logout</button>
+      <form action="/logout" method="post">
+        <input type="hidden" name="${_csrf.parameterName}"
+        value="${_csrf.token}" />
+          <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
         </div>
 
     </nav>
 
-    <section class="container col-lg-4" style="margin-top: 100px;">
+    <section class="container" style="margin-top: 100px;">
       <style>
         table {
           font-family: arial, sans-serif;
@@ -88,7 +94,8 @@
             <th scope="col">#</th>
             <th scope="col">Username</th>
             <th scope="col">Email</th>
-            <th scope="col">Password</th>
+         
+            <th scope="col">Country</th>
           </tr>
         </thead>
         <tbody>
@@ -98,7 +105,8 @@
             <th scope="row">${user.id}</th>
             <td>${user.username}</td>
             <td>${user.email}</td>
-            <td>${user.password}</td>
+           
+            <td>${user.country}</td>
           </tr>
           </c:forEach>
           </c:if>
@@ -117,7 +125,7 @@
           <div class="col-8 d-flex justify-content-start">
             <span>&copy; 2022.
               <i class="fa-brands fa-github"></i>
-              <a href="https://github.com/him32223/demo">demo</a>
+              <a href="https://www.facebook.com/cheanhung.goo/">demo_GOO</a>
             </span>
           </div>
 

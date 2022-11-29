@@ -40,8 +40,7 @@ public class SecurityConfig {
         http
             .authorizeHttpRequests()
                 .antMatchers(HttpMethod.GET, "/").permitAll()
-                .antMatchers(HttpMethod.GET, "/assets/").permitAll()
-                .antMatchers(HttpMethod.GET, "/images/").permitAll()
+                .antMatchers(HttpMethod.GET, "/assets/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/about").permitAll()
                 .antMatchers(HttpMethod.GET, "/signin").permitAll()
                 .antMatchers(HttpMethod.GET, "/signup").permitAll()
@@ -55,6 +54,7 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.GET, "/verify-reset-password").permitAll()
                 .antMatchers(HttpMethod.GET, "/reset-password").permitAll()
                 .antMatchers(HttpMethod.POST, "/reset-password").permitAll()
+                .antMatchers(HttpMethod.POST, "/index").permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
@@ -65,6 +65,7 @@ public class SecurityConfig {
                 .permitAll()
                 .and()
             .logout()
+            .logoutSuccessUrl("/signin")
                 .invalidateHttpSession(true)
                 .permitAll();
 

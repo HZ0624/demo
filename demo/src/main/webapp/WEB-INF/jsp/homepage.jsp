@@ -191,7 +191,7 @@
                 </table>
                 <br>
                 <br>
-                <p class="m-0 text-white">&copy; <a href="#">Domain Name</a>. All Rights Reserved. Designed by <a href="https://www.facebook.com/cheanhung.goo/">@HZ </a>
+                <p class="m-0 text-white">&copy; <a href="#">Domain Name</a>. All Rights Reserved. Designed by <a href="https://www.facebook.com/cheanhung.goo/">demo_GOO </a>
             </div>
         </section>
     
